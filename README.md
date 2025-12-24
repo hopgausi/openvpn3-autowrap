@@ -40,3 +40,20 @@ Ensure you have the following installed:
 | `vpn start`  | Cleans duplicates, imports config, and starts session with 2FA |
 | `vpn stop`   | Safely disconnects all active sessions                         |
 | `vpn status` | Shows current session info and connection paths                |
+
+## 🖥️ System Tray Monitoring (Optional)
+
+To see your VPN status in the GNOME top bar at all times:
+
+1. **Install the monitor:**
+   ```bash
+   sudo apt update && sudo apt install indicator-sysmonitor
+   ```
+2. **Launch it** and go to `Preferences` -> `Advanced`.
+
+3. **Create a new sensor** called "VPN":
+
+   - **Command:** `IP=$(openvpn3 sessions-list | grep "Connected to:" | awk -F: '{print $3}' | head -n 1); if [ -z "$IP" ]; then echo "off"; else echo "on($IP)"; fi`
+
+4. **Add** `vpn: {VPN}` to your customization line in the Sensors tab.
+5. **You should be able to see the vpn status in the top bar of the system monitor**
