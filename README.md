@@ -1,6 +1,6 @@
 # openvpn3-autowrap
 
-Automated OpenVPN 3 wrapper for Linux with Sophos 2FA support and self-healing configuration management.
+Automated OpenVPN 3 wrapper for Linux with Sophos 2FA support and self-healing configuration management. Start | Stop | Status VPN session with 2FA made easy.
 
 ## ✨ Features
 
@@ -13,7 +13,7 @@ Automated OpenVPN 3 wrapper for Linux with Sophos 2FA support and self-healing c
 
 Ensure you have the following installed:
 
-- `openvpn3-linux`
+- `openvpn3-linux` [Install](https://openvpn.net/cloud-docs/tutorials/configuration-tutorials/connectors/operating-systems/linux/tutorial--learn-to-install-and-control-the-openvpn-3-client.html#installation-for-debian-and-ubuntu_body)
 - `expect`
 - `grep`, `awk`, `xargs` (standard on most distros)
 
